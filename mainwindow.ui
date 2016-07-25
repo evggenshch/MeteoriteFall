@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>848</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Моделирование полета метеорита</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>370</y>
+      <width>191</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Начать моделирование</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="setting_model">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>791</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="planet_edit_tab">
+     <attribute name="title">
+      <string>Параметры планеты</string>
+     </attribute>
+     <widget class="QLabel" name="planet_mass_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Масса планеты(10&lt;span style=&quot; vertical-align:super;&quot;&gt;24&lt;/span&gt; кг):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="planet_mass_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="planet_radius_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Радиус планеты(10&lt;span style=&quot; vertical-align:super;&quot;&gt;6 &lt;/span&gt;м):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="planet_radius_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="planet_rotate_speed_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Угловое вращение(рад/с):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="planet_rotate_speed_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="meteorite_edit_tab">
+     <attribute name="title">
+      <string>Параметры метеорита</string>
+     </attribute>
+     <widget class="QLineEdit" name="meteorite_mass_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_radius_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_mass_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Масса метеорита(10&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt; кг):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_radius_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Радиус метеорита(м):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_x0_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>20</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальная x(x&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;6 &lt;/span&gt;м):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_y0_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>80</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальная y(y&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;6&lt;/span&gt; м):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_z0_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>140</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальная z(z&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;6 &lt;/span&gt;м):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_x0_edit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>50</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_y0_edit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>110</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_z0_edit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>170</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_v0x_edit">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>50</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_v0y_edit">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>110</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="meteorite_v0z_edit">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>170</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_v0x_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>20</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальный v&lt;span style=&quot; vertical-align:sub;&quot;&gt;x&lt;/span&gt;(v&lt;span style=&quot; vertical-align:sub;&quot;&gt;0x&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt; км/c):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_v0y_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальный v&lt;span style=&quot; vertical-align:sub;&quot;&gt;y&lt;/span&gt;(v&lt;span style=&quot; vertical-align:sub;&quot;&gt;0y&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt; км/с):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="meteorite_v0z_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начальный v&lt;span style=&quot; vertical-align:sub;&quot;&gt;z&lt;/span&gt;(v&lt;span style=&quot; vertical-align:sub;&quot;&gt;0z&lt;/span&gt;, 10&lt;span style=&quot; vertical-align:super;&quot;&gt;3 &lt;/span&gt;км/с):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>0</y>
+        <width>20</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>0</y>
+        <width>20</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="atmosphere_edit_tab">
+     <attribute name="title">
+      <string>Параметры атмосферы</string>
+     </attribute>
+     <widget class="QTableWidget" name="atm_set_tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>761</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="rowCount">
+       <number>1</number>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <row>
+       <property name="text">
+        <string>Атмосферный слой №1</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Высота</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Показатель адиабаты (gamma)</string>
+       </property>
+       <property name="background">
+        <color>
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Плотность</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="add_atm_layer_button">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>280</y>
+        <width>121</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Добавить слой</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="model_edit_tab">
+     <attribute name="title">
+      <string>Параметры построения модели</string>
+     </attribute>
+     <widget class="QRadioButton" name="meteorite_enabled_button">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>50</y>
+        <width>102</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Метеорит</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="lander_enabled_button">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>80</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Спускаемый аппарат</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="model_speed_slider">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>261</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="model_speed_label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Скорость моделирования</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>0</y>
+        <width>20</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="object_type_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>20</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Тип объекта</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>130</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="camera_bind_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>160</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Привязка камеры</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="free_bind_button">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>190</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Свободная камера</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="meteorite_bind_button">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>220</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Привязка к метеориту</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>848</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="help_open"/>
+    <addaction name="separator"/>
+    <addaction name="exit_open"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="exit_open">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="help_open">
+   <property name="text">
+    <string>Помощь</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
